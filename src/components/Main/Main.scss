@@ -1,3 +1,37 @@
+html,
+body {
+  font-family: "Montserrat", "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .Main {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.5s ease-in-out;
+}
+
+.slide-enter,
+.slide-exit {
+  transition: transform 1000ms ease-out;
+}
+
+.slide-enter {
+  transform: translateX(100%);
+}
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0%);
+}
+
+.slide-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(0%);
+}
+
+.slide-exit-active {
+  transform: translateX(-100%);
 }

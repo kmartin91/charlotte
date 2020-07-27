@@ -1,0 +1,79 @@
+.Two {
+  background-color: #778beb;
+  color: white;
+  display: flex;
+  width: 80%;
+  height: 100vh;
+  padding: 0 10%;
+  transition: all 0.5s ease-in-out;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.Two_bad {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.Two__tuile {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.Two_bad {
+  .Two__inputs {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: 33%;
+    }
+  }
+}
+
+.Two__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.Two__sentence {
+  font-size: 30px;
+  font-weight: 800;
+  opacity: 0.9;
+  transition: all 0.5s ease-in-out;
+}
+
+.Two__inputs {
+  background-color: white;
+  color: rgba(18, 41, 71, 0.8);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.Two__button {
+  background-color: rgba(18, 41, 71, 0.8);
+  cursor: pointer;
+  color: white;
+  border: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  padding: 16px;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.Two__inputCheckbox {
+  display: flex;
+  flex-direction: row;
+  padding: 32px;
+}
