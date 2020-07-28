@@ -4,7 +4,7 @@ import { useInterval } from "react-interval-hook";
 
 import "./Two.scss";
 
-const Two = ({ history }) => {
+const Two = ({ history, className }) => {
   const [currentSentence, setCurrentSentence] = useState(0);
   const [showInput, setShowInput] = useState(false);
   const [answer, setAnwser] = useState(false);
@@ -13,7 +13,7 @@ const Two = ({ history }) => {
   const { stop } = useInterval(() => {
     const newCurrentSentence = currentSentence + 1;
 
-    if (newCurrentSentence < firstSentence.length) {
+    if (newCurrentSentence < sentences.length) {
       setCurrentSentence(newCurrentSentence);
     } else {
       stop();
@@ -30,7 +30,6 @@ const Two = ({ history }) => {
   }, []);
 
   const onSubmit = () => {
-    console.log({ answer });
     if (!answer) {
       setBad(true);
     } else {
@@ -39,7 +38,7 @@ const Two = ({ history }) => {
     }
   };
 
-  const firstSentence = [
+  const sentences = [
     "Hello Charlotte",
     "Bienvenue sur ce site spécialement conçu pour toi",
     "Je te propose quelques petits jeux",
@@ -48,7 +47,7 @@ const Two = ({ history }) => {
   ];
 
   return (
-    <div className={classnames("Two", { Two_bad: bad })}>
+    <div className={classnames("Two", className, { Two_bad: bad })}>
       <div className="Two__items">
         {bad && (
           <React.Fragment>
@@ -75,9 +74,7 @@ const Two = ({ history }) => {
         )}
         {!bad && (
           <div className="Two__first">
-            <div className="Two__sentence">
-              {firstSentence[currentSentence]}
-            </div>
+            <div className="Two__sentence">{sentences[currentSentence]}</div>
             {showInput && (
               <p className="Two__inputs">
                 <div className="Two__inputCheckbox">

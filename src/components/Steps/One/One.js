@@ -3,7 +3,7 @@ import classnames from "classnames";
 
 import "./One.scss";
 
-const One = ({ history }) => {
+const One = ({ history, className }) => {
   const [bad, setBad] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [badFirstName, setBadFirstName] = useState("");
@@ -29,7 +29,7 @@ const One = ({ history }) => {
   };
 
   return (
-    <div className={classnames("One", { One_error: bad })}>
+    <div className={classnames("One", className, { One_error: bad })}>
       <div className="One__items">
         <p className="One__headLine">
           {!bad && <span>Bonjour demoiselle, jouons à un petit jeu !</span>}

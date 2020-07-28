@@ -17,9 +17,9 @@ const AnimatedSwitch = withRouter(({ location }) => (
   <TransitionGroup>
     <CSSTransition key={location.key} classNames="slide" timeout={1000}>
       <Switch location={location}>
-        <Route path="/" component={One} exact />
-        <Route path="/hey" component={Two} />
-        <Route path="/tiptop" component={Third} />
+        <Route path="/" component={One} className="Component" exact />
+        <Route path="/hey" component={Two} className="Component" />
+        <Route path="/tiptop" component={Third} className="Component" />
       </Switch>
     </CSSTransition>
   </TransitionGroup>
