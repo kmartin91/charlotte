@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import classnames from "classnames";
 import { useInterval } from "react-interval-hook";
+import { Helmet } from "react-helmet";
 
 import "./Two.scss";
 
@@ -49,6 +50,10 @@ const Two = ({ history, className }) => {
   return (
     <div className={classnames("Two", className, { Two_bad: bad })}>
       <div className="Two__items">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Bonjour Charlotte</title>
+        </Helmet>
         {bad && (
           <React.Fragment>
             <div className="Two__tuile">

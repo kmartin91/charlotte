@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import classnames from "classnames";
 import { useInterval } from "react-interval-hook";
+import { Helmet } from "react-helmet";
 import music from "../../../../assets/sounds/music.mp3";
 import TicTacToe from "../../Games/TicTacToe/TicTacToe";
 import "./Third.scss";
@@ -134,6 +135,10 @@ const Third = ({ history, className }) => {
       })}
     >
       <div className="Third__items">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Et c'est parti pour quelques questions</title>
+        </Helmet>
         {currentStep === 0 && (
           <React.Fragment>
             {!showGif && information}
@@ -179,6 +184,10 @@ const Third = ({ history, className }) => {
         )}
         {currentStep === 1 && (
           <div className="Third__nextStep">
+            <Helmet>
+              <meta charSet="utf-8" />
+              <title>Plus qu'une étape</title>
+            </Helmet>
             <div className="Third__information">
               Essaie de gagner ce morpion
             </div>
@@ -194,6 +203,10 @@ const Third = ({ history, className }) => {
         )}
         {currentStep === 2 && (
           <div className="Third__nextStep">
+            <Helmet>
+              <meta charSet="utf-8" />
+              <title>Félicitation tu as réussi</title>
+            </Helmet>
             <div className="Third__information">
               Bravo à toi tu as réussi toutes les épreuves.
               <div className="Third__info">

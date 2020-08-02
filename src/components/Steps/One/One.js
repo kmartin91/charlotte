@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import classnames from "classnames";
 
 import "./One.scss";
@@ -30,6 +31,10 @@ const One = ({ history, className }) => {
 
   return (
     <div className={classnames("One", className, { One_error: bad })}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Hello</title>
+      </Helmet>
       <div className="One__items">
         <p className="One__headLine">
           {!bad && <span>Bonjour demoiselle, jouons à un petit jeu !</span>}
