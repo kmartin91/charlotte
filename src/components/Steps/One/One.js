@@ -10,7 +10,7 @@ const One = ({ history, className }) => {
 
   const onChange = (e) => {
     const { target: { value = "" } = {} } = e || {};
-    setFirstName(value.toLowerCase());
+    setFirstName(value.toLowerCase().trim());
   };
 
   const onKeyUp = (e) => {

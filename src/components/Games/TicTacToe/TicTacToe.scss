@@ -1,0 +1,54 @@
+.TicTacToe {
+  display: flex;
+  flex-direction: column;
+}
+
+.TicTacToe__board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-top: 32px;
+}
+
+.TicTacToe__reset {
+  background-color: rgba(18, 41, 71, 0.8);
+  cursor: pointer;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  padding: 16px;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+  margin-top: 32px;
+}
+
+.TicTacToe__square {
+  background: none;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 16px;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  font-weight: bold;
+  height: 100%;
+  min-height: 73px;
+  outline: none;
+
+  border-top: 4px solid #dfdfdf;
+  border-left: 4px solid #dfdfdf;
+  &:nth-child(-n + 2) {
+    border-top: 4px solid #dfdfdf;
+  }
+  &:nth-child(odd) {
+    border-left: 4px solid #dfdfdf;
+  }
+  &:nth-child(-n + 3) {
+    border-top: none;
+  }
+  &:first-child,
+  &:nth-child(3n + 1) {
+    border-left: none;
+  }
+}

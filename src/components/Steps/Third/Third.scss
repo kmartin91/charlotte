@@ -1,6 +1,4 @@
 .Third {
-  background-color: #f0932b;
-  color: white;
   display: flex;
   width: 80%;
   height: 100vh;
@@ -12,6 +10,21 @@
     padding: 0;
     width: 100%;
   }
+}
+
+.Third_first {
+  background-color: #f0932b;
+  color: white;
+}
+
+.Third_second {
+  background-color: #00b894;
+  color: white;
+}
+
+.Third_third {
+  background-color: #6c5ce7;
+  color: white;
 }
 
 .Third_bad {
@@ -81,4 +94,23 @@
   font-family: "Montserrat", "Roboto", sans-serif;
   padding: 16px;
   outline: none;
+}
+
+.Third__question {
+  padding: 0 10%;
+  max-width: 80%;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 5%;
+    max-width: 90%;
+  }
+}
+
+.Third__info {
+  font-weight: 400;
+  padding-top: 16px;
+}
+
+.Third__bold {
+  font-weight: bold;
 }
