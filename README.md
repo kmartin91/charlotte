@@ -1,8 +1,5 @@
-# Simple Boilerplate
+# An interactive website to get the day for a date with me 
 
-Simple boilerplate env de David Gribouille. 
-
-Contenant 
 
 ## Technologies
 
